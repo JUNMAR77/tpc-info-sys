@@ -30,14 +30,14 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-                    <img src="https://infyom.com/images/logo/blue_logo_150x150.jpg"
+                    <img src={{ asset('img/avatar.png') }}
                          class="user-image img-circle elevation-2" alt="User Image">
                     <span class="d-none d-md-inline">{{ Auth::user()->name }}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <!-- User image -->
                     <li class="user-header bg-primary">
-                        <img src="https://infyom.com/images/logo/blue_logo_150x150.jpg"
+                        <img src={{ asset('img/avatar2.png') }}
                              class="img-circle elevation-2"
                              alt="User Image">
                         <p>
@@ -47,7 +47,7 @@
                     </li>
                     <!-- Menu Footer-->
                     <li class="user-footer">
-                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                        <a href="{{ url('/profile') }}" class="btn btn-default btn-flat">Profile</a>
                         <a href="#" class="btn btn-default btn-flat float-right"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             Sign out
@@ -74,9 +74,9 @@
     <!-- Main Footer -->
     <footer class="main-footer">
         <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.0.5
+            <b>Version</b> 0.0.1
         </div>
-        <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
+        <strong>Copyright &copy; 2020-2021 <a href="https://www.tpc.edu.ph">Talibon Polytechnic College</a>.</strong> All rights
         reserved.
     </footer>
 </div>
