@@ -9,7 +9,7 @@ use App\Models\AcadTerm;
 use App\Models\Curriculum;
 use App\Models\Activity;
 use App\Models\Setting;
-use App\Http\Requests\UserRequest;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;

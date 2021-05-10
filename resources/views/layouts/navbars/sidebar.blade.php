@@ -74,7 +74,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="{{ route('home') }}">
+                        <a href="{{ route('dashboard') }}">
                             <img src="{{ asset('argon') }}/img/brand/blue.png">
                         </a>
                     </div>
@@ -100,7 +100,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item {{ $title == 'Dashboard' ? 'active' : '' }}">
-                    <a class="nav-link" href="{{ route('home') }}">
+                    <a class="nav-link" href="{{ route('dashboard') }}">
                         <i class="ni ni-tv-2"></i> Dashboard
                     </a>
                 </li>
