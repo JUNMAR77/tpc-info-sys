@@ -25,11 +25,11 @@ class CreateStudentsTable extends Migration
             $table->date('date_graduated')->nullable();
             $table->string('student_type', 10);
             $table->boolean('is_paid')->default(true);
-            $table->integer('curriculum_id')->unsigned();
+            $table->integer('curriculum_id')->unsigned()->nullable();
             $table->foreign('curriculum_id')->references('curriculum_id')->on('curriculum')->onDelete('cascade');
-            $table->string('acad_term_admitted_id', 6);
+            $table->string('acad_term_admitted_id', 6)->nullable();
             $table->foreign('acad_term_admitted_id')->references('acad_term_id')->on('acad_terms')->onDelete('cascade');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
