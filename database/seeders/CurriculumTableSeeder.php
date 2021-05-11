@@ -30,5 +30,10 @@ class CurriculumTableSeeder extends Seeder
         $curriculum->curriculum_id = 2020;
         $curriculum->effective_sy = '2020-2021';
         $curriculum->save();
+        
+        $curriculum = new Curriculum;
+        $curriculum->curriculum_id = 2021;
+        $curriculum->effective_sy = '2021-2022';
+        $curriculum->save();
     }
 }

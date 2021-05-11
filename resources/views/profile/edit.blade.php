@@ -15,7 +15,7 @@
                         <div class="col-lg-3 order-lg-2">
                             <div class="card-profile-image">
                                 <a href="#">
-                                    <img src="{{ asset('/img/profile_pictures/socrates_macalolot.jpg') }}" class="rounded-circle">
+                                    <img src="{{ asset('/img/profile_pictures/default.png') }}" class="rounded-circle">
                                 </a>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="card-body pt-0 pt-md-4">
-                        <div class="row">
+                        <!---<div class="row">
                             <div class="col">
                                 <div class="card-profile-stats d-flex justify-content-center mt-md-5">
                                     <div>
@@ -44,22 +44,22 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --->
                         <div class="text-center">
                             <h3>
                                 {{ auth()->user()->name }}<span class="font-weight-light">, 27</span>
                             </h3>
                             <div class="h5 font-weight-300">
-                                <i class="ni location_pin mr-2"></i>{{ __('Bucharest, Romania') }}
+                                <i class="ni location_pin mr-2"></i>{{ __('Zamora, Talibon, Bohol') }}
                             </div>
                             <div class="h5 mt-4">
-                                <i class="ni business_briefcase-24 mr-2"></i>{{ __('Solution Manager - Creative Tim Officer') }}
+                                <i class="ni business_briefcase-24 mr-2"></i>{{ __('IT Administrator - TPC') }}
                             </div>
                             <div>
-                                <i class="ni education_hat mr-2"></i>{{ __('University of Computer Science') }}
+                                <i class="ni education_hat mr-2"></i>{{ __('Talibon Polytechnic Colleged') }}
                             </div>
                             <hr class="my-4" />
-                            <p>{{ __('Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.') }}</p>
+                            <p>{{ __('Gwapo ko') }}</p>
                             <a href="#">{{ __('Show more') }}</a>
                         </div>
                     </div>

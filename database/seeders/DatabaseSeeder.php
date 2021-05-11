@@ -15,13 +15,17 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             RolesAndPermissionsSeeder::class,
+            EventsTableSeeder::class,
             AcadTermsTableSeeder::class,
-			CurriculumTableSeeder::class,
             Course2021TableSeeder::class,
+            CurriculumTableSeeder::class,
             EventsTableSeeder::class,  
+		//	CurriculumDetails2021TableSeeder::class,
+		//	Prerequisite2021TableSeeder::class,
             SettingsTableSeeder::class,
             UsersTableSeeder::class,
-            PostsTableSeeder::class,
+         //   ActivityTableSeeder::class,
+            PostsTableSeeder::class
         ]);
     }
 }

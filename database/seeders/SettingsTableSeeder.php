@@ -28,7 +28,7 @@ class SettingsTableSeeder extends Seeder
 
         $setting = new Setting;
         $setting->name = 'Current Curriculum';
-        $setting->value = '2018';
+        $setting->value = '2021';
         $setting->save();
 
         $setting = new Setting;
