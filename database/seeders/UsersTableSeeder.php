@@ -194,7 +194,7 @@ class UsersTableSeeder extends Seeder
         $student->intermediate_sy = '2007-2010';
         $student->secondary = 'Doggy High School';
         $student->secondary_sy = '2010-2015';
-    //    $student->curriculum_id = 2021;
+        $student->curriculum_id = 2021;
         $student->acad_term_admitted_id = '202101';
         $student->user_id = $user->id;
         $student->save();
@@ -228,7 +228,7 @@ class UsersTableSeeder extends Seeder
         $student->intermediate_sy = '2007-2010';
         $student->secondary = 'All Girls High School';
         $student->secondary_sy = '2010-2015';
-    //    $student->curriculum_id = 2021;
+        $student->curriculum_id = 2021;
         $student->acad_term_admitted_id = '202101';
         $student->user_id = $user->id;
         $student->save();
@@ -262,7 +262,7 @@ class UsersTableSeeder extends Seeder
         $student->intermediate_sy = '2007-2010';
         $student->secondary = 'Mendiola Science High School';
         $student->secondary_sy = '2010-2015';
-    //    $student->curriculum_id = 2021;
+        $student->curriculum_id = 2021;
         $student->acad_term_admitted_id = '202101';
         $student->user_id = $user->id;
         $student->save();
@@ -296,7 +296,7 @@ class UsersTableSeeder extends Seeder
         $student->intermediate_sy = '2008-2010';
         $student->secondary = 'Lacson High School';
         $student->secondary_sy = '2010-2015';
-    //    $student->curriculum_id = 2021;
+        $student->curriculum_id = 2021;
         $student->acad_term_admitted_id = '202101';
         $student->user_id = $user->id;
         $student->save();
@@ -329,7 +329,7 @@ class UsersTableSeeder extends Seeder
         $student->intermediate_sy = '2008-2010';
         $student->secondary = 'Lacson High School';
         $student->secondary_sy = '2010-2015';
-    //    $student->curriculum_id = 2021;
+        $student->curriculum_id = 2021;
         $student->acad_term_admitted_id = '202101';
         $student->user_id = $user->id;
         $student->save();
@@ -362,7 +362,40 @@ class UsersTableSeeder extends Seeder
         $student->intermediate_sy = '2008-2010';
         $student->secondary = 'Lacson High School';
         $student->secondary_sy = '2010-2015';
-    //    $student->curriculum_id = 2021;
+        $student->curriculum_id = 2021;
+        $student->acad_term_admitted_id = '202101';
+        $student->user_id = $user->id;
+        $student->save();
+
+        /* ========================= */
+
+        // Users Table
+        $user = new User;
+        $user->profile_picture = 'default.jpg';
+        $user->first_name = 'Ken';
+        $user->middle_name = 'Turtoga';
+        $user->last_name = 'Cabahug';
+        $user->birthdate = '1998-05-27';
+        $user->address = 'Lacson Blvd';
+        $user->username = 'kentc';
+        $user->password = Hash::make('kentc');
+        $user->created_at = now();
+        $user->updated_at = now();
+        $user->save();
+
+        $user->assignRole('student');
+
+        // Student Table
+        $student = new Student;
+        $student->student_no = '042030106';
+        $student->student_type = 'Regular';
+        $student->primary = 'Balintawak Elementary School';
+        $student->primary_sy = '2004-2008';
+        $student->intermediate = 'Balintawak Elementary School';
+        $student->intermediate_sy = '2008-2010';
+        $student->secondary = 'San Jose National High School';
+        $student->secondary_sy = '2010-2015';
+        $student->curriculum_id = 2021;
         $student->acad_term_admitted_id = '202101';
         $student->user_id = $user->id;
         $student->save();

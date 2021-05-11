@@ -73,7 +73,7 @@ class DashboardController extends Controller
         $announcement = Setting::where('name', 'LIKE', 'Announcement')->first()->value;
 
         $acad_terms = AcadTerm::all();
-        $curriculums = Curriculum::all();
+        $curricula = Curriculum::all();
 
         return view('settings')
                 ->with('cur_acad_term_id', $cur_acad_term_id)
@@ -81,7 +81,7 @@ class DashboardController extends Controller
                 ->with('degree', $degree)
                 ->with('announcement', $announcement)
                 ->with('acad_terms', $acad_terms)
-                ->with('curriculums', $curriculums);
+                ->with('curricula', $curricula);
 
     }
 

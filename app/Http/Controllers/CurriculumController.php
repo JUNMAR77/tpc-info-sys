@@ -27,17 +27,17 @@ class CurriculumController extends Controller
 
         if( request()->has('search')) {
             $search = request('search');
-            $curriculums = Curriculum::where('curriculum_id', 'like', '%'.$search.'%')
+            $curricula = Curriculum::where('curriculum_id', 'like', '%'.$search.'%')
                         ->orWhere('effective_sy', 'like', '%'.$search.'%')
                         ->orderBy('curriculum_id', 'desc')
                         ->paginate(15);
-            $curriculums->appends(['search' => $search]);
+            $curricula->appends(['search' => $search]);
         } else {
-            $curriculums = Curriculum::orderBy('curriculum_id', 'desc')->paginate(15);
+            $curricula = Curriculum::orderBy('curriculum_id', 'desc')->paginate(15);
         }
 
-        return view('curriculums.index')
-                ->with('curriculums', $curriculums)
+        return view('curricula.index')
+                ->with('curricula', $curricula)
                 ->with('curCurriculum', $curCurriculum)
                 ->with('degree', $degree)
                 ->with('search', $search);
@@ -50,7 +50,7 @@ class CurriculumController extends Controller
      */
     public function create()
     {
-        return view('curriculums.create');
+        return view('curricula.create');
     }
 
     /**
@@ -72,7 +72,7 @@ class CurriculumController extends Controller
         $curriculum->effective_sy = $request->input('effective_sy');
         $curriculum->save();
 
-        return redirect('/curriculums')->with('success', 'Curriculum Created');
+        return redirect('/curricula')->with('success', 'Curriculum Created');
     }
 
     /**
@@ -90,7 +90,7 @@ class CurriculumController extends Controller
 
         $degree = Setting::where('name', 'LIKE', 'Degree')->first()->value;
 
-        return view('curriculums.show')
+        return view('curricula.show')
                 ->with('curriculum', $curriculum)
                 ->with('curriculum_details', $curriculum_details)
                 ->with('degree', $degree);
@@ -106,7 +106,7 @@ class CurriculumController extends Controller
     {
         $curriculum = Curriculum::find($id);
 
-        return view('curriculums.edit')->with('curriculum', $curriculum);
+        return view('curricula.edit')->with('curriculum', $curriculum);
     }
 
     /**
@@ -129,7 +129,7 @@ class CurriculumController extends Controller
         $curriculum->effective_sy = $request->input('effective_sy');
         $curriculum->save();
 
-        return redirect('/curriculums')->with('success', 'Curriculum Updated');
+        return redirect('/curricula')->with('success', 'Curriculum Updated');
     }
 
     /**
@@ -146,12 +146,12 @@ class CurriculumController extends Controller
         $setting = Setting::find($setting_id);
 
         if($setting->value == $id)
-            return redirect('/curriculums')->with('error','Curriculum canot be deleted due to being set as the Current Curriculum. Change the Current Curriculum before deletion.');
+            return redirect('/curricula')->with('error','Curriculum canot be deleted due to being set as the Current Curriculum. Change the Current Curriculum before deletion.');
 
         $curriculum = Curriculum::find($id);
 
         $curriculum->delete();
 
-        return redirect('/curriculums')->with('success', 'Curriculum Removed');
+        return redirect('/curricula')->with('success', 'Curriculum Removed');
     }
 }

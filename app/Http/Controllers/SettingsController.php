@@ -26,6 +26,6 @@ class SettingsController extends Controller
         $setting->value = $curriculum_id;
         $setting->save();
 
-        return redirect('/curriculums')->with('success', 'Current Curriculum Updated');
+        return redirect('/curricula')->with('success', 'Current Curriculum Updated');
     }
 }

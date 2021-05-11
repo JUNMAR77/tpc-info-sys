@@ -179,7 +179,7 @@
                                 @role('head registrar')
                                   {{ $grade->curriculumDetails->curriculum_id }} {{ $grade->curriculumDetails->course->course_code}}
                                 @else
-                                  <a href="/curriculums/{{ $grade->curriculumDetails->curriculum_id }}">
+                                  <a href="/curricula/{{ $grade->curriculumDetails->curriculum_id }}">
                                     {{ $grade->curriculumDetails->curriculum_id }} {{ $grade->curriculumDetails->course->course_code}}
                                   </a>
                                 @endrole

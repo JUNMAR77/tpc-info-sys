@@ -89,7 +89,7 @@ Route::group(['middleware' => ['auth', 'role:admin|registrar']], function () {
 	Route::resource('acad_terms','App\Http\Controllers\AcadTermController')->except('show');
 	Route::put('settings/set_cur_acad_term/{setting}','App\Http\Controllers\SettingsController@setCurAcadTerm');
 
-	Route::resource('curriculums','App\Http\Controllers\CurriculumController');
+	Route::resource('curricula','App\Http\Controllers\CurriculumController');
 	Route::resource('curriculum_details','App\Http\Controllers\CurriculumDetailsController')->except([
 		'index', 'create', 'show'
 	]);

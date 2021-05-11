@@ -106,13 +106,13 @@ class StudentController extends Controller
      */
     public function create()
     {
-        $curriculums = Curriculum::all();
+        $curricula = Curriculum::all();
         $acad_terms = AcadTerm::all();
         $cur_acad_term = Setting::where('name', 'LIKE', 'Current Acad Term')->first()->value;
         $cur_curriculum_id = Setting::where('name', 'LIKE', 'Current Curriculum')->first()->value;
 
         return view('students.create')
-                    ->with('curriculums', $curriculums)
+                    ->with('curricula', $curricula)
                     ->with('acad_terms', $acad_terms)
                     ->with('cur_acad_term', $cur_acad_term)
                     ->with('cur_curriculum_id', $cur_curriculum_id);
@@ -618,12 +618,12 @@ class StudentController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        $curriculums = Curriculum::all();
+        $curricula = Curriculum::all();
         $acad_terms = AcadTerm::all();
 
         return view('students.edit')
                     ->with('user', $user)
-                    ->with('curriculums', $curriculums)
+                    ->with('curricula', $curricula)
                     ->with('acad_terms', $acad_terms);
     }
 

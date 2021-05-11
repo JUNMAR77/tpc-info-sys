@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-uppercase text-muted mb-0">Announcement</h5>
                         <span class="h2 font-weight-bold mb-0">
-                          announcement
+                          {{ $announcement }}
                         </span>
                         <p class="mt-3 mb-0 text-muted text-sm">
                             <span class="text-nowrap">curAcadTerm</span>

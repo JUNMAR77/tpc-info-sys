@@ -33,7 +33,7 @@ class SettingsTableSeeder extends Seeder
 
         $setting = new Setting;
         $setting->name = 'Announcement';
-        $setting->value = 'For new enrollees on November, please go to the registrar\'s office at 1PM onwards.';
+        $setting->value = 'For new enrollees on August, please go to the registrar\'s office at 1PM onwards.';
         $setting->save();
     }
 }
