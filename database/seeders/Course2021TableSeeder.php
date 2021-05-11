@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\Course;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class Course2021TableSeeder extends Seeder
@@ -13,6 +14,7 @@ class Course2021TableSeeder extends Seeder
      */
     public function run()
     {
+    	 DB::table('courses')->delete();
         /** 2020 -2021 Curriculum **/
 
         $course = new Course;

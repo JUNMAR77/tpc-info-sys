@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 use App\Models\CurriculumDetails;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class CurriculumDetails2021TableSeeder extends Seeder
@@ -13,6 +14,8 @@ class CurriculumDetails2021TableSeeder extends Seeder
      */
     public function run()
     {
+    	DB::table('curriculum_details')->delete();
+
         /* 2021 Curriculum */
 
         /* 1st Year 1st Sem */

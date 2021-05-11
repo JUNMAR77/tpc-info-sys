@@ -50,12 +50,7 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-6">
-                        <a href="/forgot_password" class="text-light">
-                            <small>Forgot password?</small>
-                        </a>
-                    </div>
-                    <div class="col-6 text-right">
+                    <div class="col-12 text-center">
                         <a href="/" class="text-light">
                             <small>Return Home</small>
                         </a>

@@ -25,7 +25,7 @@ class CreateGradeTable extends Migration
             $table->foreign('class_id')->references('class_id')->on('class')->onDelete('cascade');
             $table->string('student_no', 10);
             $table->foreign('student_no')->references('student_no')->on('students')->onDelete('cascade');
-            $table->integer('curriculum_details_id')->unsigned()->nullable();
+            $table->integer('curriculum_details_id')->unsigned();
             $table->foreign('curriculum_details_id')->references('curriculum_details_id')->on('curriculum_details')->onUpdate('cascade');
         });
     }

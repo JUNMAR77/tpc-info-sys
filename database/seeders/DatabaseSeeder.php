@@ -19,12 +19,11 @@ class DatabaseSeeder extends Seeder
             AcadTermsTableSeeder::class,
             Course2021TableSeeder::class,
             CurriculumTableSeeder::class,
-            EventsTableSeeder::class,  
-		//	CurriculumDetails2021TableSeeder::class,
+        //	CurriculumDetails2021TableSeeder::class,
 		//	Prerequisite2021TableSeeder::class,
             SettingsTableSeeder::class,
             UsersTableSeeder::class,
-         //   ActivityTableSeeder::class,
+            ActivityTableSeeder::class,
             PostsTableSeeder::class
         ]);
     }
