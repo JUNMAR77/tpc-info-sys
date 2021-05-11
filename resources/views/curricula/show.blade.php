@@ -20,11 +20,11 @@
 
                 <div class="row">
                   <div class="col">
-                    <a href="/curriculums" class="btn btn-outline-secondary btn-sm">
+                    <a href="/curricula" class="btn btn-outline-secondary btn-sm">
                       Return
                     </a>
                     @role('admin|registrar')
-                    <a href="/curriculums/{{ $curriculum->curriculum_id }}/edit" class="btn btn-outline-info btn-sm">
+                    <a href="/curricula/{{ $curriculum->curriculum_id }}/edit" class="btn btn-outline-info btn-sm">
                       Edit Curriculum
                     </a>
 

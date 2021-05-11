@@ -82,7 +82,7 @@
                                                 <a class="dropdown-item" href="/courses/{{ $course->course_code }}/edit">
                                                     Edit
                                                 </a>
-                                                <form action="{{ action('CourseController@destroy', $course->course_code) }}" method="post">
+                                                <form action="{{ action('App\Http\Controllers\CourseController@destroy', $course->course_code) }}" method="post">
                                                     @csrf
                                                     @method('delete')
 

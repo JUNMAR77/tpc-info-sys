@@ -28,6 +28,16 @@
                         <i class="ni ni-single-02"></i>
                         <span>Profile</span>
                     </a>
+                    @role('admin')
+                    <a href="/posts/create" class="dropdown-item {{ $title == 'Write Post' ? 'active' : '' }}">
+                        <i class="ni ni-fat-add"></i>
+                        <span>Write Post</span>
+                    </a>
+                    <a href="/posts" class="dropdown-item {{ $title == 'View My Posts' ? 'active' : '' }}">
+                        <i class="ni ni-single-copy-04"></i>
+                        <span>View My Posts</span>
+                    </a>
+                    @endrole
                     @role('admin|moderator')
                     <a href="/posts/mod/published" class="dropdown-item {{ $title == 'All Published Posts' ? 'active' : '' }}">
                         <i class="ni ni-books"></i>
@@ -242,7 +252,7 @@
                     <div class="collapse" id="navbar-curriculum">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="/curriculums">
+                                <a class="nav-link" href="/curricula">
                                     Curriculum Masterlist
                                 </a>
                             </li>

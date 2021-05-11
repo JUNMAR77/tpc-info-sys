@@ -9,7 +9,7 @@
                             <div class="row">
                                <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">New Students</h5>
-                                    <span class="h2 font-weight-bold mb-0">TOTAL STUDENTS</span>
+                                    <span class="h2 font-weight-bold mb-0">{{ $tot_students}}</span>
                                 </div> 
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
@@ -29,7 +29,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Classes</h5>
-                                    <span class="h2 font-weight-bold mb-0">{{ $tot_classes }}</span>
+                                    <span class="h2 font-weight-bold mb-0">{{ $tot_classes}}</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
@@ -49,7 +49,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Instructors</h5>
-                                    <span class="h2 font-weight-bold mb-0">{{ $tot_instructors }}</span>
+                                    <span class="h2 font-weight-bold mb-0">{{ $tot_instructors}}</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -69,7 +69,7 @@
                             <div class="row">
                                 <div class="col">
                                     <h5 class="card-title text-uppercase text-muted mb-0">Users</h5>
-                                    <span class="h2 font-weight-bold mb-0">{{ $tot_users }}</span>
+                                    <span class="h2 font-weight-bold mb-0">{{ $tot_users}}</span>
                                 </div>
                                 <div class="col-auto">
                                     <div class="icon icon-shape bg-info text-white rounded-circle shadow">
@@ -92,7 +92,7 @@
                             <a href="/announcement" class="btn btn-sm btn-outline-primary float-right">Edit</a>
                             <h5 class="card-title text-uppercase text-muted mb-0">Announcement</h5>
                             <span class="h2 font-weight-bold mb-0">
-                                {{ $announcement }}
+                                ANNOUNCEMENT
                             </span>
                             <p class="mt-3 mb-0 text-muted text-sm">
                                 <span class="text-nowrap">{{ $curAcadTerm->getAcadTerm() }}</span>

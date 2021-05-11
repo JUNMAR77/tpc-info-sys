@@ -9,7 +9,7 @@
         <div class="col-xl-12 mb-5 mb-xl-0">
             <div class="card shadow">
 
-              @if(count($curriculums) > 0 || $search != null)
+              @if(count($curricula) > 0 || $search != null)
                 <div class="card-header border-0">
                     <div class="row align-items-center">
                         <div class="col col-lg-4">
@@ -18,7 +18,7 @@
                         </div>
 
                         <div class="col col-lg-4">
-                            <form action="/curriculums?" method="get" class="form-horizontal">
+                            <form action="/curricula?" method="get" class="form-horizontal">
                                 <div class="form-group mb-0">
                                     <div class="input-group input-group-sm pt-0">
                                         <input name="search" class="form-control" placeholder="e.g. 2018 or 2018-2019" type="text">
@@ -31,7 +31,7 @@
                         </div>
                         @if($search != null)
                         <div class="col">
-                            <a href="/curriculums" class="btn btn-outline-secondary btn-sm">
+                            <a href="/curricula" class="btn btn-outline-secondary btn-sm">
                                 {{ str_limit($search, 20) }}
                                 <span class="btn-inner--icon"><i class="ni ni-fat-remove"></i></span>
                             </a>
@@ -39,12 +39,12 @@
                         @endif
 
                         <div class="col text-right">
-                            <a href="/curriculums/create" class="btn btn-sm btn-primary">Add Curriculum</a>
+                            <a href="/curricula/create" class="btn btn-sm btn-primary">Add Curriculum</a>
                         </div>
                     </div>
                 </div>
 
-                @if($search != null && count($curriculums) == 0)
+                @if($search != null && count($curricula) == 0)
                     <div class="row mt-3 mb-5">
                         <div class="col text-center">
                             <p class="lead">Curriculum not found</p>
@@ -52,7 +52,7 @@
                     </div>
                 @endif
 
-                @if(count($curriculums) > 0)
+                @if(count($curricula) > 0)
                     <div class="table-responsive">
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
@@ -66,10 +66,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach ($curriculums as $curriculum)
+                            @foreach ($curricula as $curriculum)
                                 <tr>
                                     <td class="text-right" scope="row">
-                                        <a href="/curriculums/{{ $curriculum->curriculum_id }}" class="btn btn-outline-primary btn-sm">
+                                        <a href="/curricula/{{ $curriculum->curriculum_id }}" class="btn btn-outline-primary btn-sm">
                                         View
                                         </a>
                                     </td>
@@ -98,10 +98,10 @@
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                <a class="dropdown-item" href="/curriculums/{{ $curriculum->curriculum_id }}/edit">
+                                                <a class="dropdown-item" href="/curricula/{{ $curriculum->curriculum_id }}/edit">
                                                     Edit
                                                 </a>
-                                                <form action="{{ action('CurriculumController@destroy', $curriculum->curriculum_id) }}" method="post">
+                                                <form action="{{ action('App\Http\Controllers\CurriculumController@destroy', $curriculum->curriculum_id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
 
@@ -118,7 +118,7 @@
                         </table>
                     </div>
                     <div class="card-footer">
-                        {{ $curriculums->links() }}
+                        {{ $curricula->links() }}
                     </div>
                 @endif
               @else
@@ -126,7 +126,7 @@
                       <div class="col text-center">
                           <p class="lead">No Curriculum found</p>
                           <br>
-                          <a href="/curriculums/create" class="btn btn-primary btn-lg">Add Curriculum</a>
+                          <a href="/curricula/create" class="btn btn-primary btn-lg">Add Curriculum</a>
                       </div>
                   </div>
               @endif

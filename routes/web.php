@@ -138,21 +138,23 @@ Route::group(['middleware' => ['auth', 'role:admin|registrar|student']], functio
 });
 
 Route::group(['middleware' => ['auth', 'role:admin|registrar|head registrar|faculty']], function () {
-	Route::get('summary_grades/{class}/{period}/download','App\Http\Controllers\FileSummaryOfGrades@download');
-	Route::get('summary_grades/{class}/{period}/view','App\Http\Controllers\FileSummaryOfGrades@view');
+	Route::get('summary_grades/{class}/{period}/download','App\Http\Controllers\FileSummaryOfGradesController@download');
+	Route::get('summary_grades/{class}/{period}/view','App\Http\Controllers\FileSummaryOfGradesController@view');
 });
 
 Route::group(['middleware' => ['auth', 'role:admin|head registrar|faculty']], function () {
-	Route::get('summary_grades/{class}/{period}','App\Http\Controllers\FileSummaryOfGrades@index');
-	Route::put('summary_grades/{class}/{period}/store','App\Http\Controllers\FileSummaryOfGrades@store');
-	Route::get('summary_grades/{class}/{period}/remove','App\Http\Controllers\FileSummaryOfGrades@remove');
+	Route::get('summary_grades/{class}/{period}','App\Http\Controllers\FileSummaryOfGradesController@index');
+	Route::put('summary_grades/{class}/{period}/store','App\Http\Controllers\FileSummaryOfGradesController@store');
+	Route::get('summary_grades/{class}/{period}/remove','App\Http\Controllers\FileSummaryOfGradesController@remove');
 });
 
 Route::group(['middleware' => ['auth', 'role:head registrar']], function () {
-	Route::resource('registrars','App\Http\Controllers\RegistrarController');
+	Route::resource('registrars','App\Http\Controllers\RegistrarController')->only(['index', 'update', 'destroy']);
+
 	Route::get('archived/registrars','App\Http\Controllers\RegistrarController@archived');
 	Route::get('registrars/{registrar}/archive','App\Http\Controllers\RegistrarController@setAsArchived');
 	Route::get('registrars/{registrar}/unarchive','App\Http\Controllers\RegistrarController@setAsUnarchived');
+	Route::delete('registrars/{registrar}/{id}', 'App\Http\Controllers\RegistrarController@destroy')->name('destroy');
 });
 
 Route::group(['middleware' => ['auth', 'role:registrar']], function () {

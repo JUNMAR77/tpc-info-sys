@@ -91,7 +91,7 @@ class CurriculumDetailsController extends Controller
 
         }
 
-        return redirect('/curriculums/' . $request->input('curriculum_id'))->with('success', 'Course Added to Curriculum');
+        return redirect('/curricula/' . $request->input('curriculum_id'))->with('success', 'Course Added to Curriculum');
     }
 
     /**
@@ -175,6 +175,6 @@ class CurriculumDetailsController extends Controller
 
         $cur_detail->delete();
 
-        return redirect('/curriculums/' . $curriculum_id)->with('success', 'Course Removed in Curriculum');
+        return redirect('/curricula/' . $curriculum_id)->with('success', 'Course Removed in Curriculum');
     }
 }

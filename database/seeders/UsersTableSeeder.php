@@ -80,8 +80,8 @@ class UsersTableSeeder extends Seeder
         $user->middle_name = 'Escartin';
         $user->last_name = 'Cabasag';
         $user->gender = 'F';
-        $user->username = 'K002';
-        $user->password = Hash::make('K002');
+        $user->username = 'Registrar01';
+        $user->password = Hash::make('Registrar01');
         $user->created_at = now();
         $user->updated_at = now();
         $user->save();

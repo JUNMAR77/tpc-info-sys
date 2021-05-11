@@ -8,6 +8,7 @@ use App\Models\SClass;
 use App\Models\Grade;
 use App\Models\Setting;
 use App\Models\Activity;
+use App\Models\Student;
 
 use Illuminate\Http\Request;
 
@@ -122,6 +123,15 @@ class FacultyAccessController extends Controller
         $degree = Setting::where('name', 'LIKE', 'Degree')->first()->value;
         $acad_terms = AcadTerm::where('acad_term_id', '<=', $cur_acad_term)->get();
 
+        // For Statistics
+        $tot_students = count(Student::where('acad_term_admitted_id', 'LIKE', $cur_acad_term)->get());
+        $tot_classes = count(SClass::where('acad_term_id', 'LIKE', $cur_acad_term)->get());
+        $tot_instructors = count(User::whereHas("roles",
+                            function($q){ $q->where('name', 'faculty'); })->get());
+        $tot_users = count(User::all()) - 1;
+
+        $announcement = Setting::where('name', 'LIKE', 'Announcement')->first()->value;
+
         if( request()->has('select_acad_term') ) {
             $selected_acad_term = request('select_acad_term');
         }
@@ -142,7 +152,11 @@ class FacultyAccessController extends Controller
             ->with('acad_terms', $acad_terms)
             ->with('curAcadTerm', $curAcadTerm)
             ->with('cur_acad_term', $cur_acad_term)
-            ->with('selected_acad_term', $selected_acad_term);
+            ->with('selected_acad_term', $selected_acad_term)
+            ->with('tot_students', $tot_students)
+            ->with('tot_classes', $tot_classes)
+            ->with('tot_instructors', $tot_instructors)
+            ->with('tot_users', $tot_users);
     }
 
     public function unofficialDropStudent($id)

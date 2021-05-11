@@ -108,7 +108,7 @@
                                                 <a class="dropdown-item" href="/acad_terms/{{ $acadTerm->acad_term_id }}/edit">
                                                     Edit
                                                 </a>
-                                                <form action="{{ action('AcadTermController@destroy', $acadTerm->acad_term_id) }}" method="post">
+                                                <form action="{{ action('App\Http\Controllers\AcadTermController@destroy', $acadTerm->acad_term_id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
 

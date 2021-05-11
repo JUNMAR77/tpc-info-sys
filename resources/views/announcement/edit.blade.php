@@ -11,7 +11,7 @@
                     <div class="card-body">
                       <h2>Edit Announcement</h2>
                       <hr>
-                      <form id="form-post" method="POST" action="{{ action('DashboardController@updateAnnouncement') }}">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\DashboardController@updateAnnouncement') }}">
                           @csrf
                           @method('POST')
 

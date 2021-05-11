@@ -90,7 +90,7 @@
                           @foreach ($credit_courses as $credit_course)
                             <tr>
                                 <td class="text-center" scope="row">
-                                <a href="/curriculums/{{ $credit_course->getCurriculumId() }}">
+                                <a href="/curricula/{{ $credit_course->getCurriculumId() }}">
                                   {{ $credit_course->getCreditedCourse() }}
                                 </a>
                                 </td>

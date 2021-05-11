@@ -109,7 +109,7 @@
                                 {{ $grade->sclass->instructor->user->getNameWithTitle() }}
                               </td>
                               <td>
-                                <a href="/curriculums/{{ $grade->curriculumDetails->curriculum_id }}">
+                                <a href="/curricula/{{ $grade->curriculumDetails->curriculum_id }}">
                                   {{ $grade->curriculumDetails->curriculum_id }} {{ $grade->curriculumDetails->course->course_code}}
                                 </a>
                               </td>
