@@ -16,7 +16,7 @@
   <p class="description">
     Got something to ask? Inquire and send us a message.
   </p>
-  <form method="POST" action="{{ action('MessagesController@store') }}" class="contact-form" autocomplete="off">
+  <form method="POST" action="{{ action('App\Http\Controllers\MessagesController@store') }}" class="contact-form" autocomplete="off">
     @csrf
 
     <div class="form-group">

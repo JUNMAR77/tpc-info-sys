@@ -9,7 +9,7 @@
             <div class="col-xl-12 mb-5 mb-xl-0">
                 <div class="card shadow">
                     <div class="card-body">
-                      <form id="form-post" method="POST" action="{{ action('EventsController@update', $event->event_id) }}">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\EventsController@update', $event->event_id) }}">
                           @csrf
                           @method('PUT')
 

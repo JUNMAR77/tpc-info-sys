@@ -36,7 +36,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="form-post" method="POST" action="{{ action('GradeController@storeCompletionGrade', $grade->grade_id) }}">
+                        <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\GradeController@storeCompletionGrade', $grade->grade_id) }}">
                             @csrf
                             @method('PUT')
 

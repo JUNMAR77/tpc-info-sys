@@ -130,7 +130,7 @@
                                         Edit
                                     </a>
 
-                                    <form action="{{ action('SClassController@destroy', $sclass->class_id) }}" method="post">
+                                    <form action="{{ action('App\Http\Controllers\SClassController@destroy', $sclass->class_id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
 

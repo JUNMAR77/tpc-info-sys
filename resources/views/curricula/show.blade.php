@@ -28,7 +28,7 @@
                       Edit Curriculum
                     </a>
 
-                    <form action="{{ action('CurriculumController@destroy', $curriculum->curriculum_id) }}" method="post" style="display:inline">
+                    <form action="{{ action('App\Http\Controllers\CurriculumController@destroy', $curriculum->curriculum_id) }}" method="post" style="display:inline">
                         @csrf
                         @method('delete')
 
@@ -109,7 +109,7 @@
                                             Edit
                                         </a>
 
-                                        <form action="{{ action('CurriculumDetailsController@destroy', $cur_detail->curriculum_details_id) }}" method="post" style="display: inline">
+                                        <form action="{{ action('App\Http\Controllers\CurriculumDetailsController@destroy', $cur_detail->curriculum_details_id) }}" method="post" style="display: inline">
                                             @csrf
                                             @method('delete')
 

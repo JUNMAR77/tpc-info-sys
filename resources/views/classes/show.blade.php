@@ -86,7 +86,7 @@
                       Edit Class
                     </a>
 
-                    <form action="{{ action('SClassController@destroy', $sclass->class_id) }}" method="post" style="display:inline">
+                    <form action="{{ action('App\Http\Controllers\SClassController@destroy', $sclass->class_id) }}" method="post" style="display:inline">
                         @csrf
                         @method('DELETE')
 
@@ -197,7 +197,7 @@
                                         Drop
                                     </a>
 
-                                    <form action="{{ action('GradeController@destroy', $grade->grade_id) }}" method="post">
+                                    <form action="{{ action('App\Http\Controllers\GradeController@destroy', $grade->grade_id) }}" method="post">
                                         @csrf
                                         @method('DELETE')
 

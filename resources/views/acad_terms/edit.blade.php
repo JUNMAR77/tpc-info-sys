@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="form-post" method="POST" action="{{ action('AcadTermController@update', $acadTerm->acad_term_id) }}" autocomplete="off">
+                        <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\AcadTermController@update', $acadTerm->acad_term_id) }}" autocomplete="off">
                             @csrf
                             @method('PUT')
 

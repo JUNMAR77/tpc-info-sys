@@ -27,7 +27,7 @@
                     <h2>Upload Summary of Grades</h2>
                     <h3>{{ $sclass->getCourse() }}</h3>
                       <hr>
-                      <form id="form-post" method="POST" action="{{ action('FileSummaryOfGrades@store', [$sclass->class_id, $period]) }}" enctype="multipart/form-data">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\FileSummaryOfGradesController@store', [$sclass->class_id, $period]) }}" enctype="multipart/form-data">
                           @csrf
                           @method('PUT')
 

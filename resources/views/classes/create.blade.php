@@ -72,7 +72,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="form-post" method="POST" action="{{ action('SClassController@store') }}" autocomplete="off">
+                        <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\SClassController@store') }}" autocomplete="off">
                             @csrf
 
                             <div class="pl-lg-4 row">

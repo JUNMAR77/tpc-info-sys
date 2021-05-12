@@ -54,7 +54,7 @@
                     <div class="col mt-3 mb-xl-0">
                         <div class="card shadow">
                             <div class="card-body">
-                                <form method="POST" action="{{ action('MessagesController@destroy', $msg->message_id) }}" style="display: inline;">
+                                <form method="POST" action="{{ action('App\Http\Controllers\MessagesController@destroy', $msg->message_id) }}" style="display: inline;">
                                     @csrf
                                     @method('DELETE')
 

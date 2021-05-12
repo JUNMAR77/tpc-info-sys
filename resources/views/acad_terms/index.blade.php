@@ -76,7 +76,7 @@
                                             @method('PUT')
 
                                             <button type="submit" class="btn btn-outline-secondary btn-sm">
-                                                Set as Current Acad Term
+                                                Set as Current Academic Term
                                             </button>
                                         </form>
                                     @endif

@@ -11,7 +11,7 @@
                     <div class="card-body">
                       <h2>Add Curriculum</h2>
                       <hr>
-                      <form id="form-post" method="POST" action="{{ action('CurriculumController@store') }}">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\CurriculumController@store') }}">
                           @csrf
 
                           <div class="row">

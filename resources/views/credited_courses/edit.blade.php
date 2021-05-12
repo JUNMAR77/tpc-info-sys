@@ -11,7 +11,7 @@
                     <div class="card-body">
                       <h2>Edit School</h2>
                       <hr>
-                      <form id="form-post" method="POST" action="{{ action('CreditedCoursesController@update', [$user_id, $school->credit_id]) }}">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\CreditedCoursesController@update', [$user_id, $school->credit_id]) }}">
                           @csrf
                           @method('PUT')
 

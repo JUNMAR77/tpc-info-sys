@@ -62,7 +62,7 @@
                                             <a class="dropdown-item" href="/students/{{ $user->id }}/credited_courses/{{ $school->credit_id }}/edit">
                                                 Edit
                                             </a>
-                                            <form action="{{ action('CreditedCoursesController@destroy', [$user->id, $school->credit_id]) }}" method="post">
+                                            <form action="{{ action('App\Http\Controllers\CreditedCoursesController@destroy', [$user->id, $school->credit_id]) }}" method="post">
                                                 @csrf
                                                 @method('delete')
 

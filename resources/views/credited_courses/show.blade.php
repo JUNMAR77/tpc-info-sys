@@ -31,7 +31,7 @@
                       Edit School
                     </a>
 
-                    <form action="{{ action('CreditedCoursesController@destroy', [$user->id, $school->credit_id]) }}" method="post" style="display: inline;">
+                    <form action="{{ action('App\Http\Controllers\CreditedCoursesController@destroy', [$user->id, $school->credit_id]) }}" method="post" style="display: inline;">
                         @csrf
                         @method('delete')
 

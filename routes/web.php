@@ -59,7 +59,7 @@ Route::group(['middleware' => ['auth', 'role:admin']], function () {
 	Route::get('faculties/{faculty}/load/{class}/encode','App\Http\Controllers\FacultyController@encodeGrades');
 	Route::delete('faculties/{faculty}/destroy','App\Http\Controllers\FacultyController@logDestroy');
 	Route::post('faculties/{faculty}/update','App\Http\Controllers\FacultyController@update');
-	Route::get('faculties/{faculty}/edit','App\Http\Controllers\FacultyController@edit');
+	//Route::get('faculties/{faculty}/edit','App\Http\Controllers\FacultyController@edit');
 
 	Route::get('students/{student}/enlist','App\Http\Controllers\StudentController@enlist');
 	Route::delete('students/enlistment/{grade}/drop','App\Http\Controllers\StudentController@dropClass');

@@ -125,7 +125,7 @@
                                                 Edit Student
                                                 </a>
 
-                                                <form action="{{ action('StudentController@destroy', $user->id) }}" method="post" style="display: inline">
+                                                <form action="{{ action('App\Http\Controllers\StudentController@destroy', $user->id) }}" method="post" style="display: inline">
                                                     @csrf
                                                     @method('DELETE')
 

@@ -26,7 +26,7 @@
                                 <button type="button" class="btn btn-sm btn-outline-primary" onclick="javascript:history.back()">Return</button>
                             </div>
                             <div class="col-8 text-right">
-                                <form method="POST" action="{{ action('MessagesController@destroy', $msg->message_id) }}" style="display: inline;">
+                                <form method="POST" action="{{ action('App\Http\Controllers\MessagesController@destroy', $msg->message_id) }}" style="display: inline;">
                                     @csrf
                                     @method('DELETE')
 

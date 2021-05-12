@@ -90,7 +90,7 @@
                                                 <a class="dropdown-item" href="/events/{{ $event->event_id }}/edit">
                                                     Edit
                                                 </a>
-                                                <form action="{{ action('EventsController@destroy', $event->event_id) }}" method="post">
+                                                <form action="{{ action('App\Http\Controllers\EventsController@destroy', $event->event_id) }}" method="post">
                                                     @csrf
                                                     @method('delete')
 

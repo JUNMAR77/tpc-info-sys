@@ -96,7 +96,7 @@
                                                     Unarchive Faculty
                                                 </a>
 
-                                                <form action="{{ action('FacultyController@destroy', $faculty->id) }}" method="post">
+                                                <form action="{{ action('App\Http\Controllers\FacultyController@destroy', $faculty->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
 

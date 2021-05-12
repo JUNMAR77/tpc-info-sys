@@ -37,7 +37,7 @@
 
                             <div class="col text-right">
 
-                                <form method="POST" action="{{ action('UserController@logDestroyAll') }}" style="display: inline;">
+                                <form method="POST" action="{{ action('App\Http\Controllers\UserController@logDestroyAll') }}" style="display: inline;">
                                     @csrf
                                     @method('DELETE')
 
@@ -92,7 +92,7 @@
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        <form action="{{ action('UserController@logDestroy', $activity->activity_id) }}" method="post">
+                                                        <form action="{{ action('App\Http\Controllers\UserController@logDestroy', $activity->activity_id) }}" method="post">
                                                             @csrf
                                                             @method('DELETE')
 

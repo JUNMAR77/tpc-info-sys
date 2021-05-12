@@ -72,7 +72,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="form-post" method="POST" action="{{ action('SClassController@update', $sclass->class_id) }}" autocomplete="off">
+                        <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\SClassController@update', $sclass->class_id) }}" autocomplete="off">
                             @csrf
                             @method('PUT')
 

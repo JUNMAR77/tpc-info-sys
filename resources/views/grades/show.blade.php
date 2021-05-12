@@ -128,7 +128,7 @@
                             Locking of grades should be done upon the approval of the OIC in which he/she can unlock the grades temporarily for the faculty. By default, the succeeding period's grades are locked unless the current period's grades has been encoded. In short, if the prelims grades haven't been encoded yet, grades for midterms and finals are temporarily locked.
                           </p>
 
-                          <form id="form-post" method="POST" action="{{ action('SClassController@lockGrades') }}" enctype="multipart/form-data">
+                          <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\SClassController@lockGrades') }}" enctype="multipart/form-data">
                             @csrf
 
                             <input name="class_id" type="text" value="{{ $sclass->class_id }}" style="display:none;">

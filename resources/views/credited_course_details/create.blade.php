@@ -25,7 +25,7 @@
                     <div class="card-body">
                       <h2>Credit Course</h2>
                       <hr>
-                      <form id="form-post" method="POST" action="{{ action('CreditedCoursesDetailsController@store', [$user->id, $school->credit_id]) }}">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\CreditedCoursesDetailsController@store', [$user->id, $school->credit_id]) }}">
                           @csrf
 
                           <div class="row">

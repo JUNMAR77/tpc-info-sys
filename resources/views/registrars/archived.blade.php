@@ -88,7 +88,7 @@
                                                 Unarchive Registrar
                                             </a>
 
-                                            <form action="{{ action('RegistrarController@destroy', $registrar->id) }}" method="post" style="display: inline;">
+                                            <form action="{{ action('App\Http\Controllers\RegistrarController@destroy', $registrar->id) }}" method="post" style="display: inline;">
                                                 @csrf
                                                 @method('DELETE')
 

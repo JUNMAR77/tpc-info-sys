@@ -104,10 +104,10 @@ class Student extends Model
 
         if ($this->isGraduate() && $this->student_type != 'Graduate') {
             $student = Student::find($student_no);
-            $student->date_graduated = now();
+            $student->date_graduated = null;//now();
             $student->save();
 
-            return 'Graduate';
+            return 'Undergraduate';
         }
         else if($this->isGraduate()) {
             return 'Graduate';

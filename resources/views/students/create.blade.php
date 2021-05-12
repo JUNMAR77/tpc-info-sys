@@ -48,7 +48,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="form-post" method="POST" action="{{ action('StudentController@store') }}" enctype="multipart/form-data" autocomplete="off">
+                        <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\StudentController@store') }}" enctype="multipart/form-data" autocomplete="off">
                             @csrf
 
                             <h6 class="heading-small text-muted mb-4">

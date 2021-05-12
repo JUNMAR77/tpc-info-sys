@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="form-post" method="POST" action="{{ action('AcadTermController@store') }}" autocomplete="off">
+                        <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\AcadTermController@store') }}" autocomplete="off">
                             @csrf
 
                             <div class="pl-lg-4 row">

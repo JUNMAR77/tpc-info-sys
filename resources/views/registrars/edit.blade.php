@@ -41,7 +41,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="card-body">
-                        <form id="form-post" method="POST" action="{{ action('RegistrarController@update', $user->id) }}" enctype="multipart/form-data" autocomplete="off">
+                        <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\RegistrarController@update', $user->id) }}" enctype="multipart/form-data" autocomplete="off">
                             @csrf
                             @method('PUT')
 

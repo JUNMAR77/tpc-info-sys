@@ -11,7 +11,7 @@
                     <div class="card-body">
                       <h2>Add School</h2>
                       <hr>
-                      <form id="form-post" method="POST" action="{{ action('CreditedCoursesController@store', $user_id) }}">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\CreditedCoursesController@store', $user_id) }}">
                           @csrf
 
                           <div class="row">

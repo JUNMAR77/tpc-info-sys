@@ -27,7 +27,7 @@
                     <div class="card-body">
                       <h2>Edit Course in Curriculum</h2>
                       <hr>
-                      <form id="form-post" method="POST" action="{{ action('CurriculumDetailsController@update', $cur_detail->curriculum_details_id) }}">
+                      <form id="form-post" method="POST" action="{{ action('App\Http\Controllers\CurriculumDetailsController@update', $cur_detail->curriculum_details_id) }}">
                           @csrf
                           @method('PUT')
 

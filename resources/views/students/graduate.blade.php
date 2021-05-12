@@ -86,7 +86,7 @@
                                                     Edit
                                                 </a>
 
-                                                <form action="{{ action('StudentController@destroy', $student->user->id) }}" method="post">
+                                                <form action="{{ action('App\Http\Controllers\StudentController@destroy', $student->user->id) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
 
